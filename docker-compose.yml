@@ -16,6 +16,8 @@ services:
     restart: always
   mysql:
     image: mysql
+    volumes:
+        - ./database:/database
     environment:
         - MYSQL_USER=user
         - MYSQL_PASSWORD=mypassword
